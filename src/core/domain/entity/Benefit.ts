@@ -1,3 +1,4 @@
+import { BUSINESS_ERRORS } from "../../../../src/core/error/error";
 import { BusinessError } from "../../error/BusinessError";
 import ID from "../vo/ID";
 
@@ -14,9 +15,9 @@ export class Benefit {
     isActive: boolean = true
   ) {
     if (name.length < 2 || name.length > 100)
-      throw new BusinessError("Invalid name");
+      throw new BusinessError(BUSINESS_ERRORS.INVALID_NAME);
     if (description.length > 255)
-      throw new BusinessError("Invalid description");
+      throw new BusinessError(BUSINESS_ERRORS.INVALID_DESCRIPTION);
 
     this.id = id;
     this.name = name;
