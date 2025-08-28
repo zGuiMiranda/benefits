@@ -1,0 +1,35 @@
+GET http://localhost:9000/benefits?page=0&size=5&sort=name&direction=asc
+Content-Type: application/json
+
+{
+  "name": "Nome do Benefício",
+  "description": "Descrição do Benefício"
+
+}
+
+###
+
+
+POST http://localhost:9000/benefits
+Content-Type: application/json
+
+{
+  "name": "Nome Beneficio",
+  "description": "Descrição do Benefício"
+
+}
+###
+PUT http://localhost:9000/benefits/1/activate
+
+
+
+###
+PUT http://localhost:9000/benefits/1/deactivate
+
+
+###
+DELETE http://localhost:9000/benefits/1
+
+
+
+

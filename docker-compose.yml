@@ -1,0 +1,18 @@
+services:
+  benefits-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/usr/src/app
+    restart: always
+    env_file:
+      - .env.development
+    networks:
+      - orion
+
+networks:
+  orion:
+    driver: bridge
